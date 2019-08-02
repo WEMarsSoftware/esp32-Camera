@@ -20,6 +20,8 @@
 // Replace with your network credentials
 const char *ssid = "SM-G925W81765";
 const char *password = "klts9796";
+//const char *ssid = "WE-N-ECE-0015";
+//const char *password = "56cR72^1";
 
  
 AsyncWebServer server(80);
