@@ -60,18 +60,18 @@
 				transform: rotate(270deg);
 				max-width: 100vh;
 				max-height: 100vw;
-				top:50%;
+				top:50px;
 				
 			}
 			figure img	
 			{
 				display:block;
 				width:100%;
-				height:auto;
+				height:100%;//auto;
 				border-radius:4px;
 				margin-top:8px
 			}
-			@media (min-width: 100%) and (orientation:landscape)
+			@media screen and (min-width: 768px) and (orientation:landscape)
 			{
 				#content
 				{
@@ -82,10 +82,10 @@
 				figure img
 				{
 					display:block;
-					max-width:100%;
+					max-width:500%;
 					max-height:calc(100vh - 40px);
-					width:auto;
-					height:auto
+					//width:auto;
+					//height:auto
 				}
 				figure
 				{
