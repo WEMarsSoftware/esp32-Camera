@@ -319,15 +319,8 @@
 			}
 			.image-container
 			{
-			position:absolute;
-			//right:5px;
-			//top:100px;
-			width: 50vw;
-			//left: 50%;
-			//right: 50%;
-			//margin-left: -50vw;
-			//margin-right: -50vw;
-			
+				position:absolute;
+				width: 55vw;
 			}
 			.close
 			{
@@ -387,20 +380,13 @@
             <div id="logo">
                 <label for="nav-toggle-cb" id="nav-toggle">&#9776;&nbsp;&nbsp;Toggle settings</label>
             </div>
-						
-			
-			
-            <div id="content">
-			   <div class="input-group" id="AxisServo_group">
+			<div id="content">
+				<div class="input-group" id="AxisServo_group">
 				
-				<input type="range" class="vranger" id="YaxisServo" min="0" max="180" value="90" orient="vertical"/>
-				<button id="centered" class="CBtn">Center</button> 
-				<input type="range"  class="hranger" id="XaxisServo" min="0" max="180" value="90" />
-				 
-			     
-				 
-				 				 
-			</div>
+					<input type="range" class="vranger" id="YaxisServo" min="0" max="180" value="90" orient="vertical"/>
+					<button id="centered" class="CBtn">Center</button> 
+					<input type="range"  class="hranger" id="XaxisServo" min="0" max="180" value="90" />
+				</div>
                 <div id="sidebar">
                     <input type="checkbox" id="nav-toggle-cb" >
                     <nav id="menu">
@@ -579,27 +565,9 @@
                                 <label class="slider" for="colorbar"></label>
                             </div>
                         </div>
-						<!--
-                        <div class="input-group" id="face_detect-group">
-                            <label for="face_detect">Face Detection</label>
-                            <div class="switch">
-                                <input id="face_detect" type="checkbox" class="default-action">
-                                <label class="slider" for="face_detect"></label>
-                            </div>
-                        </div>
-                        <div class="input-group" id="face_recognize-group">
-                            <label for="face_recognize">Face Recognition</label>
-                            <div class="switch">
-                                <input id="face_recognize" type="checkbox" class="default-action">
-                                <label class="slider" for="face_recognize"></label>
-                            </div>
-                        </div>
-						-->
-						
-                        <section id="buttons">
+						<section id="buttons">
                             <button id="get-still">Get Still</button>
                             <button id="toggle-stream">Start Stream</button>
-                           <!-- <button id="face_enroll" class="disabled" disabled="disabled">Enroll Face</button>  -->
                         </section>
 						
                     </nav>
@@ -722,17 +690,6 @@
 											e(x)
 										}
 									}
-									//else 
-									//{
-									//	if ('face_recognize'===B.id&&(C))
-									//	{
-									//		h(n)
-									//	}
-									//	else
-									//	{
-									//		g(n)
-									//	}
-									//}
 								}
 							}
 						}
@@ -761,7 +718,6 @@
 						l=document.getElementById('get-still'),
 						Btn=document.getElementById('centered'),
 						m=document.getElementById('toggle-stream'),
-						//n=document.getElementById('face_enroll'),
 						o=document.getElementById('close-stream'),
 						p=()=>{window.stop(),
 						m.innerHTML='Start Stream'},
@@ -797,10 +753,6 @@
 					const B='Stop Stream'===m.innerHTML;
 							B?p():q()
 				},
-				//n.onclick=()=>
-				//{
-				//	b(n)
-			//	},
 				document.querySelectorAll('.default-action').forEach(B=>
 				{
 					B.onchange=()=>b(B)
@@ -832,28 +784,6 @@
 					b(w),
 					w.checked?f(x):e(x)
 				};
-				//const //	y=document.getElementById('face_detect'),
-					//	z=document.getElementById('face_recognize'),
-					///	A=document.getElementById('framesize');
-				//A.onchange=()=>
-				//{
-				//	b(A),
-			//		5<A.value&&(i(y,!1),i(z,!1))
-			//	},
-			//	y.onchange=()=>
-			//	{
-			//		return 5
-			//		<A.value?(alert('Please select CIF or lower resolution before enabling this feature!'),
-			//		void i(y,!1)):
-			//			void(b(y),
-			//			!y.checked&&(g(n),i(z,!1)))
-			//	},
-			//	z.onchange=()=>
-			//	{
-			//		return 5<A.value?(alert('Please select CIF or lower resolution before enabling this feature!'),
-			//		void i(z,!1)):
-			//			void(b(z),z.checked?(h(n),i(y,!0)):g(n))
-			//	}
 			});
 
         </script>
