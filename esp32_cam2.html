@@ -320,7 +320,7 @@
 			.image-container
 			{
 				position:absolute;
-				width: 55vw;
+				width: 50vw;
 			}
 			.close
 			{
@@ -383,9 +383,9 @@
 			<div id="content">
 				<div class="input-group" id="AxisServo_group">
 				
-					<input type="range" class="vranger" id="YaxisServo" min="0" max="180" value="90" orient="vertical"/>
+					<input type="range" class="vranger" id="YaxisServo" min="12" max="26" value="19" orient="vertical"/>
 					<button id="centered" class="CBtn">Center</button> 
-					<input type="range"  class="hranger" id="XaxisServo" min="0" max="180" value="90" />
+					<input type="range"  class="hranger" id="XaxisServo" min="12" max="26" value="19" />
 				</div>
                 <div id="sidebar">
                     <input type="checkbox" id="nav-toggle-cb" >
@@ -729,9 +729,9 @@
 				};
 				Btn.onclick=()=>
 				{
-					document.getElementById('YaxisServo').value=90;
+					document.getElementById('YaxisServo').value=19;
 					b(document.getElementById('YaxisServo'));
-					document.getElementById('XaxisServo').value=90;
+					document.getElementById('XaxisServo').value=19;
 					b(document.getElementById('YaxisServo'));
 				},
 				l.onclick=()=>

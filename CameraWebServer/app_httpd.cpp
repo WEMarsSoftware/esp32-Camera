@@ -60,6 +60,8 @@ httpd_handle_t camera_httpd = NULL;
 static mtmn_config_t mtmn_config = {0};
 static int8_t detection_enabled = 0;
 static int8_t recognition_enabled = 0;
+static int8_t si8XServoPCM = 20;
+static int8_t si8YServoPCM = 20;
 static int8_t is_enrolling = 0;
 static face_id_list id_list = {0};
 
@@ -507,20 +509,15 @@ static esp_err_t cmd_handler(httpd_req_t *req){
     else if(!strcmp(variable, "special_effect")) res = s->set_special_effect(s, val);
     else if(!strcmp(variable, "wb_mode")) res = s->set_wb_mode(s, val);
     else if(!strcmp(variable, "ae_level")) res = s->set_ae_level(s, val);
-    else if(!strcmp(variable, "face_detect")) {
-        detection_enabled = val;
-        if(!detection_enabled) {
-            recognition_enabled = 0;
-        }
+    else if(!strcmp(variable, "YaxisServo")) {
+        si8YServoPCM = val;
+        
     }
-    else if(!strcmp(variable, "face_enroll")) is_enrolling = val;
-    else if(!strcmp(variable, "face_recognize")) {
-        recognition_enabled = val;
-        if(recognition_enabled){
-            detection_enabled = val;
-        }
+    else if(!strcmp(variable, "XaxisServo")){
+      si8XServoPCM = val;
+      ledcWrite(1,20);
     }
-    else {
+   else {
         res = -1;
     }
 
