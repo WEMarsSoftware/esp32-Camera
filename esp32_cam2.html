@@ -732,7 +732,7 @@
 					document.getElementById('YaxisServo').value=19;
 					b(document.getElementById('YaxisServo'));
 					document.getElementById('XaxisServo').value=19;
-					b(document.getElementById('YaxisServo'));
+					b(document.getElementById('XaxisServo'));
 				},
 				l.onclick=()=>
 				{
@@ -758,6 +758,10 @@
 					B.onchange=()=>b(B)
 				});
 				document.querySelectorAll('.vranger').forEach(B=>
+				{
+					B.onchange=()=>b(B)
+				});
+				document.querySelectorAll('.hranger').forEach(B=>
 				{
 					B.onchange=()=>b(B)
 				});

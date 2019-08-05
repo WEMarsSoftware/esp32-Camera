@@ -177,13 +177,17 @@ void setup() {
   Serial.print(WiFi.localIP());
   Serial.println("' to connect");
 
-
-   ledcSetup(1, 50, 8); // channel 5, 50 Hz, 16-bit width
-   ledcAttachPin(25, 1);   // GPIO 25 assigned to channel 1
-   ledcWrite(1,20); //1mS = 13   1.5mS = 20, 2mS = 25
-   ledcSetup(2, 50, 8); // channel 5, 50 Hz, 16-bit width
-   ledcAttachPin(25, 2);   // GPIO 25 assigned to channel 1
-   ledcWrite(2,20); //1mS = 13   1.5mS = 20, 2mS = 25
+     // pinMode(13,OUTPUT);
+   //   digitalWrite(13,LOW);
+   ledcSetup(4, 50, 8); // channel 5, 50 Hz, 16-bit width
+   ledcAttachPin(13, 4);   // GPIO 25 assigned to channel 1
+   ledcWrite(4,20); //1mS = 13   1.5mS = 20, 2mS = 25
+   ledcSetup(5, 50, 8); // channel 5, 50 Hz, 16-bit width
+   ledcAttachPin(12, 5);   // GPIO 25 assigned to channel 1
+   ledcWrite(5,20); //1mS = 13   1.5mS = 20, 2mS = 25
+   // ledcSetup(6, 50, 8); // channel 5, 50 Hz, 16-bit width
+   //ledcAttachPin(16, 6);   // GPIO 25 assigned to channel 1
+   //ledcWrite(6,13); //1mS = 13   1.5mS = 20, 2mS = 25
 }
 
 void loop() {

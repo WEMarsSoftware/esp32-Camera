@@ -511,11 +511,11 @@ static esp_err_t cmd_handler(httpd_req_t *req){
     else if(!strcmp(variable, "ae_level")) res = s->set_ae_level(s, val);
     else if(!strcmp(variable, "YaxisServo")) {
         si8YServoPCM = val;
-        
+        ledcWrite(4,si8YServoPCM);
     }
     else if(!strcmp(variable, "XaxisServo")){
       si8XServoPCM = val;
-      ledcWrite(1,20);
+      ledcWrite(5,si8XServoPCM);
     }
    else {
         res = -1;
