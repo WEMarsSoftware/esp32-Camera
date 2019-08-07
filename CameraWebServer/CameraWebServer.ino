@@ -110,8 +110,9 @@ AsyncWebServer server(80);
 void startCameraServer();
 
 void setup() {
+  delay(5000);//start up delay 5 sec
   Serial.begin(115200);
-  Serial.setDebugOutput(true);
+  Serial.setDebugOutput(false);
   Serial.println();
 
   camera_config_t config;
@@ -181,10 +182,10 @@ void setup() {
    //   digitalWrite(13,LOW);
    ledcSetup(4, 50, 8); // channel 5, 50 Hz, 16-bit width
    ledcAttachPin(13, 4);   // GPIO 25 assigned to channel 1
-   ledcWrite(4,20); //1mS = 13   1.5mS = 20, 2mS = 25
+   ledcWrite(4,17); //1mS = 13   1.5mS = 20, 2mS = 25
    ledcSetup(5, 50, 8); // channel 5, 50 Hz, 16-bit width
    ledcAttachPin(12, 5);   // GPIO 25 assigned to channel 1
-   ledcWrite(5,20); //1mS = 13   1.5mS = 20, 2mS = 25
+   ledcWrite(5,17); //1mS = 13   1.5mS = 20, 2mS = 25
    // ledcSetup(6, 50, 8); // channel 5, 50 Hz, 16-bit width
    //ledcAttachPin(16, 6);   // GPIO 25 assigned to channel 1
    //ledcWrite(6,13); //1mS = 13   1.5mS = 20, 2mS = 25
